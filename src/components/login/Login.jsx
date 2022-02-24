@@ -1,5 +1,5 @@
 
-import React,{ useEffect, useState } from "react"; 
+import React,{ useState } from "react"; 
 import { Link,useNavigate } from 'react-router-dom';
 
 
@@ -8,7 +8,6 @@ const Login =()=>{
     const navigate= useNavigate();
     const [formValues,setFormValues]=useState({
         inputVal:"",
-       
     })
 
     const inputValHandler= (event)=>{
@@ -32,11 +31,7 @@ const Login =()=>{
                     value={formValues.inputVal}
                     onChange={inputValHandler} 
                 />
-                
                 <br />
-                
-               
-
                 <input 
                     type="submit"  
                     value="continue"
