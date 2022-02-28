@@ -11,6 +11,9 @@ import History from './components/sellerpages/History';
 import Setting from './components/sellerpages/Setting';
 import Logout from './components/logout/Logout';
 import Sellersignup from './components/sellerpages/SellerSignup';
+import Userdashboard from './components/userpages/UserDashboard';
+import ScanQr from './components/userpages/ScanQr';
+import Fileuploader from './components/userpages/FileUploader';
 
 const App = ()=> {
   return (
@@ -18,13 +21,16 @@ const App = ()=> {
       <Routes>
         <Route path="/" element={<Login />} exact />
         <Route path="/signup" element={<Signup />} exact />
+        <Route path="/scanqr" element={<ScanQr/>} exact />
         <Route path="/sellersignup" element={<Sellersignup />} exact />
         <Route path="/loginwithotp" element={<LoginWithOTP />} exact />
-        <Route path="/cred" element={<Credentails/>} exact></Route>
-        <Route path="/sellerdashboard" element={<SellerDashboard/> } exact></Route>
-        <Route path="/history" element={<History/> } exact></Route>
-        <Route path="/setting" element={<Setting/> } exact></Route>
-        <Route path="/logout" element={<Logout/> } exact></Route>
+        <Route path="/cred" element={<Credentails/>} exact/>
+        <Route path="/sellerdashboard" element={<SellerDashboard/> } exact/>
+        <Route path="/history" element={<History/> } exact/>
+        <Route path="/setting" element={<Setting/> } exact/>
+        <Route path="/fileuploader" element={<Fileuploader/>} exact/>
+        <Route path="/logout" element={<Logout/> } exact/>
+        <Route path="/userdashboard" element={<Userdashboard/>} exact/>
         <Route element={<Error />} />
       </Routes>
   );
