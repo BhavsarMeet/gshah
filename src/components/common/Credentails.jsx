@@ -19,24 +19,23 @@ const Credentails=({location})=>{
         setFormValues({password:event.target.value})
     }
 
-   
     return (
         <>
         <form onSubmit={login}>
-             <label>Password</label><br />
+            <label>Password</label><br />
                 <input 
                     type="text" 
                     value={formValues.password}
                     onChange={passwordHandler}
                 />
-              <input 
+            <input 
                 type="submit" 
                 value="login" 
-              />  
+            />  
         </form>        
-                <hr />
+            <hr />
             <Link to="/loginwithotp">Login with OTP</Link>
-         
+        
         </>
     )
 }

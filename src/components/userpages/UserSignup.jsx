@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const Signup =()=>{
+const UserSignup =()=>{
 
     const [formValues,setFormValues]=useState({
 
@@ -14,7 +14,7 @@ const Signup =()=>{
 
     const submitHandler=(event)=>{
         event.preventDefault();
-        axios.post("http://localhost:8081/signup",formValues).then((response)=>{
+        axios.post("http://localhost:8081/signup",formValues,{headers:{'Access-Control-Allow-Origin':'*'}}).then((response)=>{
             console.log(response);
         })
     }
@@ -77,4 +77,4 @@ const Signup =()=>{
     );
 }
 
-export default Signup;
+export default UserSignup;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Fileuploader = () => {
     const [files,setFiles] = useState([{value:''}]);
@@ -13,10 +14,14 @@ const Fileuploader = () => {
     }
     const FileSubmit =(e)=>{
         e.preventDefault();
-        for(let i = 0;i<files.length;i++){
-            console.log(files[i]);
-            
-        }console.log("hi");
+        const formValues = {
+            sellerId:1,
+            ownerId:2,
+            files:files
+        };
+            axios.post("http://localhost:8081/order/sendfiles",formValues,{headers:{'Access-Control-Allow-Origin':'*'}}).then((response)=>{
+            console.log(response);
+        });
     }
     //const errMsg = () => {}
     return (

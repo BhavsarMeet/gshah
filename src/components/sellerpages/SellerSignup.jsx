@@ -24,10 +24,10 @@ const Sellersignup = () => {
 
     const submitHandler = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:8082/seller/addSeller",formValues).then((response)=>{
+        axios.post("http://localhost:8081/seller/addSeller",formValues).then((response)=>{
             console.log(response);
         });
-        navigate("/");
+        //navigate("/");
     }
     return (
         <>
