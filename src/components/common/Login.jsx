@@ -18,7 +18,7 @@ const Login =()=>{
 
     const submitHandler=(event)=>{
         event.preventDefault();
-        navigate("/cred?data="+formValues.inputVal);
+        navigate("/cred/"+formValues.inputVal);
     }
 
     return(

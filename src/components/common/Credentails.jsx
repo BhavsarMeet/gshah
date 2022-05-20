@@ -1,17 +1,20 @@
 import axios from 'axios';
 import React,{useState,useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 
-const Credentails=({location})=>{
+const Credentails=(props)=>{
     
+    let {data} = useParams();
+   
     const [formValues,setFormValues]=useState({
         password:"",
-        data:""   
     })
-
+    
+    console.log(data);
+  
     const login=(event)=>{
         event.preventDefault();
-            axios.get("http://localhost:8081/login?data="+formValues.data+"&password="+formValues.password).then((response)=>{
+            axios.get("http://localhost:8081/login?data="+data+"&password="+formValues.password).then((response)=>{
                 console.log(response);
             });
     }

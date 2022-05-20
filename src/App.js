@@ -26,7 +26,7 @@ const App = ()=> {
         <Route path="/scanqr" element={<ScanQr/>} exact />
         <Route path="/sellersignup" element={<Sellersignup />} exact />
         <Route path="/loginwithotp" element={<LoginWithOTP />} exact />
-        <Route path="/cred" element={<Credentails/>} exact/>
+        <Route path="/cred/:data" element={<Credentails/>} exact/>
         <Route path="/sellerdashboard" element={<SellerDashboard/> } exact/>
         <Route path="/history" element={<History/> } exact/>
         <Route path="/setting" element={<Setting/> } exact/>
